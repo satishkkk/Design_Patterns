@@ -1,0 +1,28 @@
+plugins{
+    id "java"
+    id "application"
+}
+
+repositories{
+    jcenter()
+}
+
+dependencies{
+    implementation project(":iaction")
+    implementation project(":action1")
+    implementation project(":action2")
+    implementation project(":action3")
+    implementation project(":action4")
+    implementation project(":defaultaction")   
+}
+
+application{
+    mainClass = "com.satish.commandserver.Application"
+}
+
+jar{
+    manifest{
+       attributes "Main-Class":
+       "com.satish.commandserver.Application"
+    }
+}
